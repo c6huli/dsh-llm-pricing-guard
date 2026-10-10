@@ -1,0 +1,4 @@
+- insert:
+    - id: llm-pricing-guard
+      name: 'dsh-llm-pricing-guard'
+      config: {}

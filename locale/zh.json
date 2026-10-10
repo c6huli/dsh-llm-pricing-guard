@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "LLM 计价守卫与压缩进度条",
+    "description": "修复缺失 imageRequestPricing 的适配器导致 /compact 崩溃，并在上下文压缩时于输入框上方显示实时进度条。"
+  }
+}

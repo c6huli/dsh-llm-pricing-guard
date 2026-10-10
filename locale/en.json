@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "LLM Pricing Guard & Compaction Progress",
+    "description": "Fixes /compact crashes on adapters missing imageRequestPricing, and shows a live progress bar above the composer while context compaction runs."
+  }
+}

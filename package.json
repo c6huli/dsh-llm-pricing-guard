@@ -1,0 +1,70 @@
+{
+  "name": "dsh-llm-pricing-guard",
+  "version": "1.0.0",
+  "description": "DSH 插件：修复缺失 imageRequestPricing 的适配器导致 /compact 崩溃（command.execute failed: gateway/internal），并增加上下文压缩进度条 / DSH plugin: fixes /compact crashes on adapters missing imageRequestPricing, and adds a live compaction progress bar above the composer.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "plugin",
+    "compaction",
+    "compact",
+    "progress-bar",
+    "llm"
+  ],
+  "author": "c6huli",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c6huli/dsh-llm-pricing-guard.git"
+  },
+  "homepage": "https://github.com/c6huli/dsh-llm-pricing-guard#readme",
+  "bugs": {
+    "url": "https://github.com/c6huli/dsh-llm-pricing-guard/issues"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "engines": {
+      "dsh": "*"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
