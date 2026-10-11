@@ -79,3 +79,5 @@ git push -u origin main
 ## License
 
 [MIT](./LICENSE)
+
+注：在0.2.0-rc.2完全确认有效
